@@ -1,5 +1,18 @@
 # Changelog
 
+## [2.0.0](https://github.com/kieranmckenzie/workflow_tests/compare/v1.0.0...v2.0.0) (2022-12-21)
+
+
+### ⚠ BREAKING CHANGES
+
+* major feat
+* major feat
+
+### Features
+
+* major feat ([445b535](https://github.com/kieranmckenzie/workflow_tests/commit/445b5359fcea8481c9603eefb3efb833f64aaa56))
+* major feat ([238b5ee](https://github.com/kieranmckenzie/workflow_tests/commit/238b5ee1e77f5a136ea5a25ea3609c4c32d082d9))
+
 ## 1.0.0 (2022-12-21)
 
 
