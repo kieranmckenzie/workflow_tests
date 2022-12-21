@@ -1,0 +1,29 @@
+on:
+  push:
+    branches:
+      - main
+name: release-please
+jobs:
+  release-please:
+    runs-on: ubuntu-latest
+    outputs:
+      release_created: ${{ steps.rp.outputs.release_created }}
+    steps:
+      - uses: google-github-actions/release-please-action@v3
+        name: rp
+        id: rp
+        with:
+          release-type: node
+          package-name: release-please-action
+      # -  uses: slackapi/slack-github-action@v1.23.0
+      #    if: ${{steps.rp.outputs.release_created}}
+      #    env:
+      #       SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_CHANGELOG_ANNOUNCE_KEY }}
+      #    with:
+      #       channel-id: '#kieran-workflow-notifications-test-dummy-channel'
+      #       slack-message:  Release version ${{steps.rp.outputs.major}}.${{steps.rp.outputs.minor}}.${{steps.rp.outputs.patch}}
+  debugstuff:
+    runs-on: ubuntu-latest
+    needs: release-please
+    steps:
+     - run: echo ${{ needs.release-please.outputs.release_created }}
