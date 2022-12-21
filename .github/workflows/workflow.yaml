@@ -8,6 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     outputs: 
       release_created: ${{ steps.rp.outputs.release_created }}
+      version: ${{steps.rp.outputs.major}}.${{steps.rp.outputs.minor}}
     steps:
       - uses: google-github-actions/release-please-action@v3
         name: rp
@@ -27,4 +28,4 @@ jobs:
     needs: release-please
     if: needs.release-please.outputs.release_created
     steps:
-     - run: echo ${{ needs.release-please.outputs.release_created }}
+     - run: echo ${{ needs.release-please.outputs.version}}
