@@ -6,7 +6,7 @@ name: release-please
 jobs:
   release-please:
     runs-on: ubuntu-latest
-    output: 
+    outputs: 
       release_created: ${{ steps.rp.outputs.release_created }}
     steps:
       - uses: google-github-actions/release-please-action@v3
@@ -27,4 +27,4 @@ jobs:
     needs: release-please
     if: needs.release-please.outputs.release_created
     steps:
-     - run: echo ${{ needs.release-please.outputs }}
+     - run: echo ${{ needs.release-please.outputs.release_created }}
