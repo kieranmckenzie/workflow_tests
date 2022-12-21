@@ -1,5 +1,16 @@
 # Changelog
 
+## [3.0.0](https://github.com/kieranmckenzie/workflow_tests/compare/v2.0.0...v3.0.0) (2022-12-21)
+
+
+### ⚠ BREAKING CHANGES
+
+* workflow
+
+### Features
+
+* workflow ([2f06a28](https://github.com/kieranmckenzie/workflow_tests/commit/2f06a28bc51d0fd55a2d40b9a29327196b5254c5))
+
 ## [2.0.0](https://github.com/kieranmckenzie/workflow_tests/compare/v1.0.0...v2.0.0) (2022-12-21)
 
 
