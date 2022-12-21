@@ -23,5 +23,6 @@ jobs:
   debugstuff:
     runs-on: ubuntu-latest
     needs: release-please
+    if: needs.release-please.outputs.releases_created
     steps:
-     - run: echo ${{ needs.release-please.outputs.releases_created }}
+     - run: echo ${{ needs.release-please.outputs }}
