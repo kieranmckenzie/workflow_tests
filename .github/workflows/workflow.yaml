@@ -26,4 +26,4 @@ jobs:
     runs-on: ubuntu-latest
     needs: release-please
     steps:
-     - run: echo ${{ jobs.release-please.outputs.releases_created }}
+     - run: echo ${{ needs.release-please.outputs.releases_created }}
